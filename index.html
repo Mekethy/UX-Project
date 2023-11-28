@@ -5,7 +5,6 @@
     <title>Journey Gemmm</title>
     <link rel="shortcut icon" type="image/x-icon" href="/favicon-16x16.png"/>
 <style>
-
 body {
   background-color: powderblue;
 }
@@ -29,7 +28,8 @@ body {
   font-size: 16px;
   transition-duration: 0.4s;
   cursor: pointer;
-  margin-left: 10px; /* Move this margin to the left side of the button */
+  display: inline-block;
+  margin-left: 10px;
 }
 
 .button1 {
@@ -49,7 +49,11 @@ body {
   right: 10px;
   width: 200px;
   height: 30px;
-  margin-right: 10px; /* Adjust margin-right to create space between the search bar and button */
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  margin-right: 10px;
 }
 
 .search-bar input {
@@ -78,7 +82,7 @@ body {
     <img src="logo.png" alt="Logo" class="image">
     <button class ="button button1" onclick="alert('Test')">About Us</button>
     <div class="search-bar">
-    <input type="text" placeholder="Search...">
+      <input type="text" placeholder="Search...">
     </div>
 </body>
 </html>
