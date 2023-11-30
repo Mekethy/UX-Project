@@ -9,6 +9,7 @@
         body {
             background-color: powderblue;
             margin: 0;
+            overflow-y: scroll; /* Enable vertical scrolling */
         }
 
         .header {
@@ -17,13 +18,14 @@
             align-items: center;
             position: relative;
             padding: 10px;
+            height: 80px; /* Set a fixed height for the header */
         }
 
         .image {
             width: 500px;
             height: 100px;
         }
-        
+
         .button {
             position: relative;
             border: none;
@@ -39,7 +41,7 @@
             background-color: #f44336;
             white-space: nowrap;
         }
-        
+
         .button:hover {
             background-color: #00008B;
             color: white;
@@ -74,6 +76,12 @@
             outline: none;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
+
+        /* Set a fixed height for the content section */
+        .content-container {
+            padding: 20px;
+            height: 100vh; /* 100% of the viewport height */
+        }
     </style>
 </head>
 
@@ -90,8 +98,10 @@
         </div>
     </div>
 
-    <h1>Journey Gem</h1>
-    <p>This is a simple HTML page for my travel comparison website</p>
+    <div class="content-container">
+        <h1>Journey Gem</h1>
+        <p>This is a simple HTML page for my travel comparison website</p>
+    </div>
 </body>
 
 </html>
