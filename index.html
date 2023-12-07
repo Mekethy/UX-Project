@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Journey Gemmm</title>
+    <title>Journey Gem</title>
     <link rel="icon" href="favicon-16x16.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
     <style>
@@ -101,6 +101,18 @@
             justify-content: space-between;
             gap: 20px;
         }
+
+        .text-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .text-container p {
+            margin-top: 10px;
+            font-size: 16px;
+        }
     </style>
 </head>
 
@@ -122,9 +134,20 @@
     </div>
 
     <div class="image-container">
-        <img src="images/images/Iceland.jpg" alt="Iceland Picture" class="image">
-        <img src="images/images/Italy.jpg" alt="Italy Picture" class="image">
-        <img src="images/images/Japan.jpg" alt="Japan Picture" class="image">
+        <div class="text-container">
+            <img src="images/images/Iceland.jpg" alt="Iceland Picture" class="image">
+            <p>Beautiful Iceland</p>
+        </div>
+        
+        <div class="text-container">
+            <img src="images/images/Italy.jpg" alt="Italy Picture" class="image">
+            <p>Charming Italy</p>
+        </div>
+
+        <div class="text-container">
+            <img src="images/images/Japan.jpg" alt="Japan Picture" class="image">
+            <p>Fascinating Japan</p>
+        </div>
     </div>
 </body>
 
