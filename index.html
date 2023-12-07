@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
-    <title>Journey Gem</title>
+    <title>Journey Gemmm</title>
     <link rel="icon" href="favicon-16x16.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
     <style>
@@ -20,7 +20,7 @@
             align-items: center;
             position: relative;
             padding: 10px;
-            height: 80px;
+            height: 80px; 
         }
 
         .logo {
@@ -28,17 +28,90 @@
             height: 100px;
         }
 
-        /* Rest of your CSS styles */
-
-        .nav-list {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
+        .image {
+            width: 400px;
+            height: 200px;
         }
 
-        .nav-list li {
+        .banner {
+            display: flex;
+            margin-top: 20px;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 300px;
+        }
+        
+        .button, a.button{
+            position: relative;
+            border: 2px solid #59e3d5;
+            color: #59e3d5;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            transition-duration: 0.4s;
+            cursor: pointer;
             margin-right: 10px;
+            background-color: white;
+            white-space: nowrap;
+            border-radius: 10px;
+        }
+
+        .button:hover, a.button:hover{
+            background-color: #59e3d5;
+            color: white;
+        }
+ 
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            margin-left: 10px;
+            min-width: 100px;
+            height: 30px;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .search-bar input {
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #59e3d5;
+            border-radius: 5px;
+            width: 25%;
+            height: 100%;
+            padding-right: 10px;
+            padding-left: 10px;
+            background-color: white;
+            color: #303837;
+            outline: none;
+        }
+        .search-bar input::placeholder {
+            color: #59e3d5; 
+        }
+
+
+        .image-container {
+            padding: 20px;
+            height: 100vh; 
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .text-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .text-container p {
+            margin-top: 10px;
+            font-size: 16px;
         }
     </style>
 </head>
@@ -47,13 +120,11 @@
     <div class="header">
         <img src="images/images/logo.png" alt="Logo" class="logo">
         <div class="search-bar">
-            <ul class="nav-list">
-                <li><a href="index.html" class="button">Home</a></li>
-                <li><a href="destinations.html" class="button">Destinations</a></li>
-                <li><a href="aboutus.html" class="button">About Us</a></li>
-                <li><a href="contactus.html" class="button">Contact Us</a></li>
-                <li><a href="https://www.instagram.com/goldsmithsuol/?hl=en " class="button">Social media</a></li>
-            </ul>
+            <a href="https://mekethy.github.io/UX-Project/" class="button">Home</a>
+            <button class="button">Destinations</button>
+            <button class="button">About Us</button>
+            <button class="button">Contact Us</button>
+            <a href="https://www.instagram.com/goldsmithsuol/?hl=en " class="button">About Us</a>
             <input type="text" placeholder="Search...">
         </div>
     </div>
@@ -67,7 +138,7 @@
             <img src="images/images/Iceland.jpg" alt="Iceland Picture" class="image">
             <p>Beautiful Iceland</p>
         </div>
-
+        
         <div class="text-container">
             <img src="images/images/Italy.jpg" alt="Italy Picture" class="image">
             <p>Charming Italy</p>
