@@ -28,28 +28,7 @@
             height: 100px;
         }
 
-        .image {
-            width: 400px;
-            height: 200px;
-        }
-
-        .banner {
-            display: flex;
-            margin-top: 20px;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            height: 300px;
-        }
-
-        .recommended{
-            display: flex;
-            margin-top:30px;
-            align-items:center;
-            width:30%;
-            height:200px;
-        }
-        .button, a.button{
+        .button, a.button {
             position: relative;
             border: 2px solid #59e3d5;
             color: #59e3d5;
@@ -69,7 +48,6 @@
             background-color: #59e3d5;
             color: white;
         }
- 
 
         .search-bar {
             display: flex;
@@ -100,6 +78,22 @@
             color: #59e3d5; 
         }
 
+        .banner {
+            display: flex;
+            margin-top: 20px;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 300px;
+        }
+
+        .recommended {
+            display: flex;
+            margin-top:30px;
+            align-items:center;
+            width:30%;
+            height:200px;
+        }
 
         .image-container {
             padding: 20px;
@@ -123,7 +117,11 @@
             font-size: 16px;
             color: #323448;
         }
-        
+
+        .image {
+            width: 400px;
+            height: 200px;
+        }
     </style>
 </head>
 
@@ -131,11 +129,11 @@
     <div class="header">
         <img src="images/images/logo.png" alt="Logo" class="logo">
         <div class="search-bar">
-            <a href="https://mekethy.github.io/UX-Project/" class="button">Home</a>
-            <button class="button">Destinations</button>
-            <button class="button">About Us</button>
-            <button class="button">Contact Us</button>
-            <a href="https://www.instagram.com/goldsmithsuol/?hl=en " class="button">Social Media</a>
+            <a href="#" onclick="showContent('home-content')" class="button">Home</a>
+            <button onclick="showContent('destinations-content')" class="button">Destinations</button>
+            <button onclick="showContent('about-us-content')" class="button">About Us</button>
+            <button onclick="showContent('contact-us-content')" class="button">Contact Us</button>
+            <a href="#" onclick="showContent('social-media-content')" class="button">Social Media</a>
             <input type="text" placeholder="Search...">
         </div>
     </div>
@@ -144,29 +142,61 @@
         <img src="images/images/banner.png" alt="Banner Image">
     </div>
 
-    <div class="recommended">
-        <img src="images/images/REC DESTINATIONS.png" alt="Recommended Image">
-    </div>    
-
-    <div class="image-container">
-        <div class="text-container">
-            <img src="images/images/Iceland.jpg" alt="Iceland Picture" class="image">
-            <img src="images/images/iceland title.png" alt="Iceland Title" class="image" style="margin-left: 20px; margin-top: -200px;">
-            <p>Explore the captivating beauty of Iceland's journey to this land of fire and ice. Discover iconic attractions such as the mesmerizing Northern Lights, the otherworldly landscapes of the Golden Circle, featuring the Geysir geothermal area and Gullfoss waterfall. Join us on a journey to uncover the wonders of Iceland!</p>
+    <div class="content" id="home-content">
+        <div class="recommended">
+            <img src="images/images/REC DESTINATIONS.png" alt="Recommended Image">
         </div>
         
-        <div class="text-container">
-            <img src="images/images/Italy.jpg" alt="Italy Picture" class="image">
-            <img src="images/images/italy title.png" alt="Italy Picture" class="image" style="margin-left: 20px; margin-top: -200px;">
-            <p>Discover the enchanting beauty of Italy, where we delve into the heart of this Mediterranean gem. Explore iconic landmarks such as the Colosseum and the romantic canals of Venice. you can witness the mesmerising Silfra Fissure, a crack between two continental plates filled with crystal-clear water. Join us on a journey through Italy and beyond as we uncover hidden wonders.</p>
-        </div>
+        <div class="image-container">
+            <div class="text-container">
+                <img src="images/images/Iceland.jpg" alt="Iceland Picture" class="image">
+                <img src="images/images/iceland title.png" alt="Iceland Title" class="image" style="margin-left: 20px; margin-top: -200px;">
+                <p>Explore the captivating beauty of Iceland's journey to this land of fire and ice. Discover iconic attractions such as the mesmerizing Northern Lights, the otherworldly landscapes of the Golden Circle, featuring the Geysir geothermal area and Gullfoss waterfall. Join us on a journey to uncover the wonders of Iceland!</p>
+            </div>
+            
+            <div class="text-container">
+                <img src="images/images/Italy.jpg" alt="Italy Picture" class="image">
+                <img src="images/images/italy title.png" alt="Italy Picture" class="image" style="margin-left: 20px; margin-top: -200px;">
+                <p>Discover the enchanting beauty of Italy, where we delve into the heart of this Mediterranean gem. Explore iconic landmarks such as the Colosseum and the romantic canals of Venice. you can witness the mesmerising Silfra Fissure, a crack between two continental plates filled with crystal-clear water. Join us on a journey through Italy and beyond as we uncover hidden wonders.</p>
+            </div>
 
-        <div class="text-container">
-            <img src="images/images/Japan.jpg" alt="Japan Picture" class="image">
-            <img src="images/images/japan title.png" alt="Japan Picture" class="image" style="margin-left: 20px; margin-top: -200px;">
-            <p>Explore the enchanting beauty of Japan, where we delve into the rich culture, stunning landscapes, and vibrant traditions of this captivating country. Discover iconic landmarks like the historic temples of Kyoto and the bustling streets of Tokyo. Join us on a journey to Japan and uncover its hidden gems, unique cuisine, and timeless traditions. </p>
+            <div class="text-container">
+                <img src="images/images/Japan.jpg" alt="Japan Picture" class="image">
+                <img src="images/images/japan title.png" alt="Japan Picture" class="image" style="margin-left: 20px; margin-top: -200px;">
+                <p>Explore the enchanting beauty of Japan, where we delve into the rich culture, stunning landscapes, and vibrant traditions of this captivating country. Discover iconic landmarks like the historic temples of Kyoto and the bustling streets of Tokyo. Join us on a journey to Japan and uncover its hidden gems, unique cuisine, and timeless traditions. </p>
+            </div>
         </div>
     </div>
+
+    <div class="content" id="destinations-content" style="display: none;">
+        <!-- Destinations content -->
+        <p>Destinations Content Goes Here</p>
+    </div>
+
+    <div class="content" id="about-us-content" style="display: none;">
+        <!-- About Us content -->
+        <p>About Us Content Goes Here</p>
+    </div>
+
+    <div class="content" id="contact-us-content" style="display: none;">
+        <!-- Contact Us content -->
+        <p>Contact Us Content Goes Here</p>
+    </div>
+
+    <div class="content" id="social-media-content" style="display: none;">
+        <!-- Social Media content -->
+        <p>Social Media Content Goes Here</p>
+    </div>
+
+    <script>
+        function showContent(contentId) {
+            var contents = document.querySelectorAll('.content');
+            contents.forEach(function (content) {
+                content.style.display = 'none';
+            });
+            document.getElementById(contentId).style.display = 'block';
+        }
+    </script>
 </body>
 
 </html>
