@@ -178,7 +178,25 @@
 
     
     <div class="content" id="destinations-content" style="display: none;">
-        <p>Destinations Content Goes Here</p>
+                <div class="image-container">
+            <div class="text-container" onclick="showContent('iceland-content')" data-searchable="Iceland">
+                <img src="images/images/Iceland.jpg" alt="Iceland Picture" class="image">
+                <img src="images/images/iceland title.png" alt="Iceland Title" class="image" style="margin-left: 20px; margin-top: -200px;">
+                <p>Explore the captivating beauty of Iceland's journey to this land of fire and ice</p>
+            </div>
+            
+            <div class="text-container" onclick="showContent('italy-content')" data-searchable="Italy">
+                <img src="images/images/Italy.jpg" alt="Italy Picture" class="image">
+                <img src="images/images/italy title.png" alt="Italy Picture" class="image" style="margin-left: 20px; margin-top: -200px;">
+                <p>Discover the enchanting beauty of Italy, where we delve into the heart of this Mediterranean gem</p>
+            </div>
+
+            <div class="text-container" onclick="showContent('japan-content')" data-searchable="Japan">
+                <img src="images/images/Japan.jpg" alt="Japan Picture" class="image">
+                <img src="images/images/japan title.png" alt="Japan Picture" class="image" style="margin-left: 20px; margin-top: -200px;">
+                <p>Explore the enchanting beauty of Japan, where we delve into the rich culture, stunning landscapes, and vibrant traditions</p>
+            </div>
+        </div>
     </div>
 
     <div style="display: flex; justify-content: center; align-items: center; margin-top: 10px;">
@@ -212,9 +230,10 @@
    </div>
 
 
-    <div class="content" id="contact-us-content" style="display: none;">
+    <div class="content" id="contact-us-content" style="display: none; text-align: center;">
         <p> To reach us, visit us at 8 Lewisham Way, London SE14 6NW or call us at 020 7919 7171 </p>
     </div>
+
 
     <script>
         function showContent(contentId) {
