@@ -224,17 +224,19 @@
             });
             document.getElementById(contentId).style.display = 'block';
         }
-
+    
         function searchCountries() {
             var searchTerm = document.getElementById('searchInput').value.toLowerCase();
             var searchableElements = document.querySelectorAll('[data-searchable]');
     
-        searchableElements.forEach(function (element) {
-            var countryName = element.getAttribute('data-searchable').toLowerCase();
-            var displayStyle = countryName.includes(searchTerm) ? 'flex' : 'none';
-            element.style.display = displayStyle;
-    });
+            searchableElements.forEach(function (element) {
+                var countryName = element.getAttribute('data-searchable').toLowerCase();
+                var displayStyle = countryName.includes(searchTerm) ? 'flex' : 'none';
+                element.style.display = displayStyle;
+            });
+        }
     </script>
+
 </body>
 
 </html>
