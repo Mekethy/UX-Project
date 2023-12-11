@@ -101,6 +101,7 @@
             max-height: 100%; 
         }
 
+
         .image-container {
             padding: 20px;
             height: 100vh; 
@@ -116,7 +117,6 @@
             text-align: center;
             max-width: 400px;
             color: #323448;
-            cursor: pointer; /* Add cursor pointer for clickable elements */
         }
 
         .text-container p {
@@ -145,7 +145,7 @@
         </div>
     </div>
 
-    <div class="banner" id="banner">
+    <div class="banner">
         <img src="images/images/banner.png" alt="Banner Image">
     </div>
 
@@ -155,25 +155,27 @@
         </div>
         
         <div class="image-container">
-            <div class="text-container" onclick="showContent('iceland-content'); changeBanner('images/images/banner_iceland.jpg');">
+            <div class="text-container" onclick="showContent('iceland-content')">
                 <img src="images/images/Iceland.jpg" alt="Iceland Picture" class="image">
                 <img src="images/images/iceland title.png" alt="Iceland Title" class="image" style="margin-left: 20px; margin-top: -200px;">
                 <p>Explore the captivating beauty of Iceland's journey to this land of fire and ice</p>
             </div>
             
-            <div class="text-container" onclick="showContent('italy-content'); changeBanner('images/images/banner_italy.jpg');">
+            <div class="text-container" onclick="showContent('italy-content')">
                 <img src="images/images/Italy.jpg" alt="Italy Picture" class="image">
                 <img src="images/images/italy title.png" alt="Italy Picture" class="image" style="margin-left: 20px; margin-top: -200px;">
                 <p>Discover the enchanting beauty of Italy, where we delve into the heart of this Mediterranean gem</p>
             </div>
 
-            <div class="text-container" onclick="showContent('japan-content'); changeBanner('images/images/banner_japan.jpg');">
+            <div class="text-container" onclick="showContent('japan-content')">
                 <img src="images/images/Japan.jpg" alt="Japan Picture" class="image">
                 <img src="images/images/japan title.png" alt="Japan Picture" class="image" style="margin-left: 20px; margin-top: -200px;">
                 <p>Explore the enchanting beauty of Japan, where we delve into the rich culture, stunning landscapes, and vibrant traditions</p>
             </div>
         </div>
     </div>
+
+
     
     <div class="content" id="destinations-content" style="display: none;">
         <p>Destinations Content Goes Here</p>
@@ -216,10 +218,6 @@
                 content.style.display = 'none';
             });
             document.getElementById(contentId).style.display = 'block';
-        }
-
-        function changeBanner(imageSrc) {
-            document.getElementById('banner').innerHTML = '<img src="' + imageSrc + '" alt="Banner Image">';
         }
     </script>
 </body>
