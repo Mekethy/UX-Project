@@ -141,7 +141,7 @@
             <button onclick="showContent('about-us-content')" class="button">About Us</button>
             <button onclick="showContent('contact-us-content')" class="button">Contact Us</button>
             <a href="https://www.instagram.com/goldsmithsuol/?hl=en"class="button">Social Media</a>
-            <input type="text" placeholder="Search...">
+            <input type="text" id="searchInput" placeholder="Search..." oninput="searchCountries()">
         </div>
     </div>
 
@@ -155,19 +155,19 @@
         </div>
         
         <div class="image-container">
-            <div class="text-container" onclick="showContent('iceland-content')">
+            <div class="text-container" onclick="showContent('iceland-content')" data-searchable="Iceland">
                 <img src="images/images/Iceland.jpg" alt="Iceland Picture" class="image">
                 <img src="images/images/iceland title.png" alt="Iceland Title" class="image" style="margin-left: 20px; margin-top: -200px;">
                 <p>Explore the captivating beauty of Iceland's journey to this land of fire and ice</p>
             </div>
             
-            <div class="text-container" onclick="showContent('italy-content')">
+            <div class="text-container" onclick="showContent('italy-content')" data-searchable="Italy">
                 <img src="images/images/Italy.jpg" alt="Italy Picture" class="image">
                 <img src="images/images/italy title.png" alt="Italy Picture" class="image" style="margin-left: 20px; margin-top: -200px;">
                 <p>Discover the enchanting beauty of Italy, where we delve into the heart of this Mediterranean gem</p>
             </div>
 
-            <div class="text-container" onclick="showContent('japan-content')">
+            <div class="text-container" onclick="showContent('japan-content')" data-searchable="Japan">
                 <img src="images/images/Japan.jpg" alt="Japan Picture" class="image">
                 <img src="images/images/japan title.png" alt="Japan Picture" class="image" style="margin-left: 20px; margin-top: -200px;">
                 <p>Explore the enchanting beauty of Japan, where we delve into the rich culture, stunning landscapes, and vibrant traditions</p>
@@ -224,6 +224,16 @@
             });
             document.getElementById(contentId).style.display = 'block';
         }
+
+        function searchCountries() {
+            var searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            var searchableElements = document.querySelectorAll('[data-searchable]');
+    
+        searchableElements.forEach(function (element) {
+            var countryName = element.getAttribute('data-searchable').toLowerCase();
+            var displayStyle = countryName.includes(searchTerm) ? 'flex' : 'none';
+            element.style.display = displayStyle;
+    });
     </script>
 </body>
 
